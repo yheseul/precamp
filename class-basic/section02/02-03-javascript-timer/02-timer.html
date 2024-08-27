@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>timer</title>
+  <script>
+    function timer() {
+      let time = 180;
+      setInterval(() => {
+        const min = Math.floor(time / 60);
+        const sec = time % 60;
+        console.log("남은 시간: " + min + ":" + sec)
+
+        time -= 1;
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="timer()">start</button>
+</body>
+</html>
