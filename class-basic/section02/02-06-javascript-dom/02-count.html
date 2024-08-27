@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>count</title>
+    <script>
+      
+      function plus() {
+        const number = document.getElementById("count").innerText
+        const plusNumber = Number(number) + 1;
+
+        document.getElementById("count").innerText = plusNumber;
+      }
+
+      function minus() {
+        const number = document.getElementById("count").innerText
+        const minusNumber = Number(number) - 1;
+
+        document.getElementById("count").innerText = minusNumber;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="count">0</div>
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+  </body>
+</html>
