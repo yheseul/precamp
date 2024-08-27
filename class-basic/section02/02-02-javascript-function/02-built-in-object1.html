@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>built-in-object1</title>
+    <script>
+      // 1. 수학 객체
+      const math = {
+        max: function () {
+          console.log("최대값 구함");
+        },
+        random: function () {
+          return 5;
+        },
+        round: function (num) {
+          console.log("반올림: " + num);
+        },
+      };
+
+      math.max();
+      math.round(2.5);
+      const randomNum = math.random();
+      console.log(randomNum);
+
+      const randomNumber = Math.random();
+      console.log(randomNumber);
+
+      // 2. 날짜 객체
+      const date = new Date();
+      console.log(date.getFullYear());
+      console.log(date.getMonth() + 1);
+      console.log(date.getDate());
+      console.log(date.getFullYear() + "-" + (date.getMonth() + 1) + '-' + date.getDate())
+    </script>
+  </head>
+  <body></body>
+</html>
