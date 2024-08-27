@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>signup</title>
+    <script>
+      function show(memberName) {
+        alert(`가입자 이름은 ${memberName}입니다.`);
+      }
+
+      function signup() {
+        const memberName = document.getElementById("inputName").value;
+        // document.getElementById("member").innerText = memberName;
+        document.getElementById("member").innerHTML = `
+          <button onclick="show('${memberName}')">${memberName}</button>
+        `;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="member"></div>
+    이름을 입력하세요: <input type="text" id="inputName" />
+    <button onclick="signup()">회원가입</button>
+  </body>
+</html>
