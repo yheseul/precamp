@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>email 쪼개기</title>
+    <script>
+      const email = "yeseul@gmail.com";
+      const split = email.split("@");
+      console.log(split);
+
+      const id = split[0];
+      const gmail = split[1];
+      console.log(id);
+      console.log(gmail);
+
+      const slice = id.slice(0, 2);
+      const asterisk = "****";
+      const newId = slice + asterisk;
+      console.log(newId);
+
+      const newEmail = newId + "@" + gmail;
+      console.log(newEmail);
+    </script>
+  </head>
+  <body></body>
+</html>
