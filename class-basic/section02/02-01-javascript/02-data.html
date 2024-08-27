@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>data</title>
+    <script>
+      // 1. 변수
+      let color = "skyblue";
+      color = "pink";
+      console.log(color);
+
+      const food = "chicken";
+      // food = 'pizza'
+      console.log(food);
+
+      // 2. 변수의 계산
+      const money1 = 1000;
+      const money2 = 5000;
+      const sum = money1 + money2;
+      console.log(sum);
+
+      const money3 = "1000";
+      const money4 = "5000";
+      const sum2 = money3 + money4;
+      console.log(sum2);
+
+      const money5 = "1000";
+      const money6 = 5000;
+      const sum3 = money5 + money6;
+      console.log(sum3);
+
+      // 3. 객체에 저장하기
+      const order1 = {
+        food: "chicken",
+        money: 5000,
+      };
+
+      const order2 = {
+        food: "pizza",
+        money: 3000,
+      };
+
+      const order3 = {
+        food: "banana",
+        money: 1000,
+      };
+
+      console.log(order1.food);
+      console.log(order2.money);
+      console.log(order3.food);
+
+      // 4. 배열에 저장하기
+      const fruits = ["apple", "banana", "orange"];
+      const orderList = [order1, order2];
+
+      fruits.push("lemon");
+      console.log(fruits);
+
+      orderList.push(order3);
+      console.log(orderList);
+
+      console.log(orderList.length);
+      console.log(orderList[0]);
+
+      const lastOrder = orderList[orderList.length - 1];
+      console.log(lastOrder);
+
+      // 5. 배열안의 객체에서 꺼내기
+      console.log(orderList[0].food);
+    </script>
+  </head>
+  <body></body>
+</html>
