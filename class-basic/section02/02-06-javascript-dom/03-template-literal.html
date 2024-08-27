@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>template-literal</title>
+    <script>
+      const fruits = "apple";
+      const color = "red";
+      const price = 5000;
+
+      console.log(
+        fruits + "는 " + color + "색상이고, 가격은 " + price + "원 입니다."
+      );
+      console.log(`${fruits}는 ${color}색상이고, 가격은 ${price}원 입니다.`);
+
+      const tab = `
+        Hi!
+        ${fruits}~
+        Nice to meet you.
+      `;
+      console.log(tab);
+    </script>
+  </head>
+  <body></body>
+</html>
