@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>built-in-object2</title>
+    <script>
+      function authentication() {
+        const randomNumber = Math.random();
+        console.log(randomNumber);
+
+        const number = Math.floor(randomNumber * 1000000);
+        console.log(number);
+
+        const authenticationNumber = String(number).padStart(6, 0);
+        console.log(authenticationNumber);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="authentication()">
+      Request for authentication number
+    </button>
+  </body>
+</html>
