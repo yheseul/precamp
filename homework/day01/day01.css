@@ -69,19 +69,23 @@
   height: 48px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .membershipLevelBadge {
-  width: 111px;
+  width: 120px;
   height: 48px;
-  border: 1xp solid #713574;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 8px;
+  padding: 8px 12px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
 }
 .student {
-  margin-top: 12px;
+  margin-left: 2px;
 }
 .sideBarLayout {
   display: flex;
@@ -133,6 +137,7 @@
 .sideMenu {
   width: 360px;
   height: 632px;
+  /* height: 760px; */
 }
 .channelNameBox {
   width: 360px;
@@ -190,6 +195,27 @@
 .sideMenuText {
   margin-left: 8px;
   margin-top: 4px;
+}
+.subscriberList {
+  width: 360px;
+  height: 232px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.subscribers {
+  width: 328px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.learner {
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: 500px;
+  color: #ffffff;
 }
 .channelList {
   margin-top: 16px;
@@ -318,7 +344,7 @@
   justify-content: end;
   margin-bottom: 12px;
 }
-.certificationNumber {
+#certificationNumber {
   color: #955c98;
   font-size: 18px;
   font-weight: 500;
@@ -326,7 +352,7 @@
   align-items: center;
   margin-right: 12px;
 }
-.requestCertificationNumber {
+#requestCertificationNumber {
   background-color: #ffffff;
   width: 144px;
   height: 40px;
@@ -337,6 +363,18 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+}
+.certificationWrapper {
+  display: flex;
+  justify-content: end;
+}
+#verificationTime {
+  width: 50px;
+  height: 24px;
+  color: #e84f4f;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 8px 12px;
 }
 .certification {
   background-color: #c7c7c7;
@@ -386,7 +424,7 @@
   font-weight: 500;
   color: #333333;
 }
-.checkbox {
+.checks {
   width: 168px;
   height: 24px;
   font-size: 18px;
@@ -395,11 +433,31 @@
   display: flex;
   align-items: center;
 }
-.check {
-  width: 24px;
+.checkbox {
+  width: 64px;
   height: 24px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.check {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: max(2.5px, 0.1em) solid #919191;
+  border-radius: 50%;
+}
+.check:checked {
+  border: 0.5em solid #491449;
+}
+.checkText {
+  width: 32px;
+  height: 24px;
+  margin-left: 8px;
+  margin-top: 4px;
 }
 .agreeBox {
+  margin-top: 16px;
   width: 560px;
   height: 92px;
   padding: 0 56px;
@@ -413,6 +471,11 @@
 #agree {
   width: 24px;
   height: 24px;
+  appearance: none;
+  border: max(2.5px, 0.1em) solid #919191;
+}
+#agree:checked {
+  border: 0.5em solid #491449;
 }
 .agreeText {
   width: 300px;

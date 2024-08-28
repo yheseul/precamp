@@ -3,6 +3,7 @@
   <head>
     <title>day01</title>
     <link rel="stylesheet" href="./day01.css" />
+    <script src="./day01.js"></script>
   </head>
   <body>
     <div class="layout">
@@ -27,10 +28,10 @@
             </div>
             <div class="rightSideHeader">
               <div class="membershipLevelBadge">
-                <img src="./img/logo_codecamp.png" width="32px" />
+                <img src="./img/logo_codecamp.png" width="32px" height="32px" />
                 <span class="student">수강생</span>
               </div>
-              <img src="./img/help.png" width="32px" />
+              <img src="./img/help.png" width="32px" height="32px" />
             </div>
           </div>
         </div>
@@ -100,6 +101,36 @@
                     </div>
                     <img src="./img/arrow_down.png" width="24" />
                   </div>
+                  <!-- <div class="subscriberList">
+                    <div class="subscribers">
+                      <img
+                        src="./img/프로필 이미지 (export 하세요).png"
+                        width="40"
+                      />
+                      <div class="learner">수강생 1</div>
+                    </div>
+                    <div class="subscribers">
+                      <img
+                        src="./img/프로필 이미지 (export 하세요).png"
+                        width="40"
+                      />
+                      <div class="learner">수강생 2</div>
+                    </div>
+                    <div class="subscribers">
+                      <img
+                        src="./img/프로필 이미지 (export 하세요).png"
+                        width="40"
+                      />
+                      <div class="learner">수강생 3</div>
+                    </div>
+                    <div class="subscribers">
+                      <img
+                        src="./img/프로필 이미지 (export 하세요).png"
+                        width="40"
+                      />
+                      <div class="learner">수강생 4</div>
+                    </div>
+                  </div> -->
                   <div class="noSubscriber">
                     <div class="noSubscriberText">
                       <div>현재 가입한 멤버가 없어요.</div>
@@ -181,10 +212,18 @@
                 </div>
                 <div class="certificationBox">
                   <div class="requestCertificationNumberBox">
-                    <div class="certificationNumber">000000</div>
-                    <div class="requestCertificationNumber">인증번호 요청</div>
+                    <div id="certificationNumber">000000</div>
+                    <button
+                      id="requestCertificationNumber"
+                      onclick="requestVerificationNumber()"
+                    >
+                      인증번호 요청
+                    </button>
                   </div>
-                  <div class="certification">인증하기</div>
+                  <div class="certificationWrapper">
+                    <div id="verificationTime"></div>
+                    <button class="certification">인증하기</button>
+                  </div>
                 </div>
                 <div class="aboutMeInputBox">
                   <div class="nameTag">자기소개</div>
@@ -196,19 +235,23 @@
                 </div>
                 <div class="checkWrapper">
                   <div class="checkTitle">성별</div>
-                  <div class="checkbox">
-                    <input
-                      class="check"
-                      type="radio"
-                      name="성별"
-                      id="여성"
-                    /><label class="" for="여성">여성</label>
-                    <input
-                      class="check"
-                      type="radio"
-                      name="성별"
-                      id="남성"
-                    /><label for="남성">남성</label>
+                  <div class="checks">
+                    <div class="checkbox">
+                      <input
+                        class="check"
+                        type="radio"
+                        name="성별"
+                        id="여성"
+                      /><label class="checkText" for="여성">여성</label>
+                    </div>
+                    <div class="checkbox">
+                      <input
+                        class="check"
+                        type="radio"
+                        name="성별"
+                        id="남성"
+                      /><label class="checkText" for="남성">남성</label>
+                    </div>
                   </div>
                 </div>
                 <div class="agreeBox">
@@ -219,7 +262,7 @@
                       >집에는 씻으러만 가는데 동의합니다.</label
                     >
                   </div>
-                  <div class="signUpBtn">가입</div>
+                  <button class="signUpBtn" onclick="signUp()">가입</button>
                 </div>
               </div>
             </div>
