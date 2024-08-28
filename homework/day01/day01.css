@@ -196,30 +196,19 @@
   margin-left: 8px;
   margin-top: 4px;
 }
-.subscriberList {
+#subscriberList {
   width: 360px;
-  height: 232px;
   padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-top: 12px;
+  display: none;
 }
-.subscribers {
+#subscribers {
   width: 328px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
-.learner {
-  margin-left: 8px;
-  font-size: 20px;
-  font-weight: 500px;
-  color: #ffffff;
+  height: 100%;
 }
 .channelList {
   margin-top: 16px;
-  margin-bottom: -24px;
+  margin-bottom: -10px;
   width: 360px;
   height: 150px;
 }
@@ -230,8 +219,9 @@
   color: #d4d3d3;
   font-size: 18px;
   font-weight: 500px;
+  margin-bottom: 8px;
 }
-.noSubscriber {
+#noSubscriber {
   margin-top: 12px;
   width: 360px;
   height: 104px;

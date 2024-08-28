@@ -101,37 +101,10 @@
                     </div>
                     <img src="./img/arrow_down.png" width="24" />
                   </div>
-                  <!-- <div class="subscriberList">
-                    <div class="subscribers">
-                      <img
-                        src="./img/프로필 이미지 (export 하세요).png"
-                        width="40"
-                      />
-                      <div class="learner">수강생 1</div>
-                    </div>
-                    <div class="subscribers">
-                      <img
-                        src="./img/프로필 이미지 (export 하세요).png"
-                        width="40"
-                      />
-                      <div class="learner">수강생 2</div>
-                    </div>
-                    <div class="subscribers">
-                      <img
-                        src="./img/프로필 이미지 (export 하세요).png"
-                        width="40"
-                      />
-                      <div class="learner">수강생 3</div>
-                    </div>
-                    <div class="subscribers">
-                      <img
-                        src="./img/프로필 이미지 (export 하세요).png"
-                        width="40"
-                      />
-                      <div class="learner">수강생 4</div>
-                    </div>
-                  </div> -->
-                  <div class="noSubscriber">
+                  <div id="subscriberList">
+                    <ul id="subscribers"></ul>
+                  </div>
+                  <div id="noSubscriber">
                     <div class="noSubscriberText">
                       <div>현재 가입한 멤버가 없어요.</div>
                       <div>회원가입 해보세요.</div>
@@ -173,6 +146,7 @@
                 <div class="inputBox">
                   <div class="nameTag">이름</div>
                   <input
+                    id="userInformation"
                     class="inputWindow"
                     type="text"
                     placeholder="이름을 입력해 주세요."
@@ -181,6 +155,7 @@
                 <div class="inputBox">
                   <div class="nameTag">이메일</div>
                   <input
+                    id="userInformation"
                     class="inputWindow"
                     type="email"
                     placeholder="네이버,구글,한메일,카카오 계정만 입력"
@@ -205,6 +180,7 @@
                 <div class="inputBox">
                   <div class="nameTag">전화번호</div>
                   <input
+                    id="userInformation"
                     class="inputWindow"
                     type="tel"
                     placeholder="010으로 시작, '-'를 꼭 입력해 주세요."
@@ -228,6 +204,7 @@
                 <div class="aboutMeInputBox">
                   <div class="nameTag">자기소개</div>
                   <input
+                    id="userInformation"
                     class="aboutMeInputWindow"
                     type="text"
                     placeholder="자기소개를 입력해 주세요."
