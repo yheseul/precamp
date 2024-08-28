@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>for</title>
+    <script>
+      for (let i = 1; i <= 3; i++) {
+        console.log("Hello");
+      }
+
+      for (let i = 1; i <= 3; i++) {
+        console.log(`${i}번째`);
+      }
+
+      const color = ["pink", "skyblue", "green"];
+      for (let i = 0; i < color.length; i++) {
+        console.log(color[i]);
+      }
+
+      const foodList = [
+        { food: "chicken", price: 15000 },
+        { food: "pizza", price: 20000 },
+        { food: "banana", price: 1000 },
+      ];
+
+      for (let i = 0; i < foodList.length; i++) {
+        console.log(`${foodList[i].food}: ${foodList[i].price}won`)
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
