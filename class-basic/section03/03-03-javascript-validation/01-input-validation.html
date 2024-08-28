@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>input-validation</title>
+    <script>
+      function inputValidation() {
+        const email = document.getElementById("email").value;
+        const checkedFemale = document.getElementById("female").checked;
+        const checkedMale = document.getElementById("male").checked;
+        const checkedAgree = document.getElementById("agree").checked;
+        console.log(email);
+        console.log(checkedFemale);
+        console.log(checkedMale);
+        console.log(checkedAgree);
+
+        const validationEmail = email !== "";
+        const validationGroup = checkedFemale == true || checkedMale == true;
+        const validationAgree = checkedAgree === true;
+
+        if (
+          validationEmail == true &&
+          validationGroup == true &&
+          validationAgree == true
+        ) {
+          document.getElementById("signUp").style = "background-color: yellow;";
+          document.getElementById("signUp").disabled = false;
+        } else {
+          document.getElementById("signUp").style = "background-color: none;";
+          document.getElementById("signUp").disabled = true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    이메일: <input id="email" oninput="inputValidation()" type="email" />
+    <input type="radio" name="group" id="female" /><label for="female"
+      >여성</label
+    >
+    <input type="radio" name="group" id="male" /><label for="male">남성</label>
+    <input type="checkbox" id="agree" /><label for="agree">agree</label>
+    <button id="signUp" disabled>signUp</button>
+  </body>
+</html>
