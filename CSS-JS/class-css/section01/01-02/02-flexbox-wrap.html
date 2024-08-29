@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>flexbox-wrap</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .parents1 {
+      width: 1000px;
+
+      background-color: slategray;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .parents2 {
+      width: 1000px;
+      height: 230px;
+      background-color: slateblue;
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+    }
+    .children1 {
+      width: 200px;
+      height: 200px;
+      background-color: aquamarine;
+      border: 10px dotted palevioletred;
+    }
+    .children2 {
+      width: 200px;
+      height: 200px;
+      background-color: aquamarine;
+      border: 10px double salmon;
+    }
+  </style>
+</head>
+<body>
+  <div class="parents1">
+    <div class="children1"></div>
+    <div class="children1"></div>
+    <div class="children1"></div>
+    <div class="children1"></div>
+    <div class="children1"></div>
+    <div class="children1"></div>
+  </div>
+
+  <div class="parents2">
+    <div class="children2"></div>
+    <div class="children2"></div>
+    <div class="children2"></div>
+    <div class="children2"></div>
+    <div class="children2"></div>
+    <div class="children2"></div>
+  </div>
+</body>
+</html>
