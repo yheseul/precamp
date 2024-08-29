@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>javascript load</title>
+  </head>
+  <script>
+    window.onload = () => {
+      const name = prompt("please enter your name.");
+      document.getElementById("inputName").innerText = name;
+    };
+
+    const register = () => {
+      document.getElementById("profile").innerText = 'hi';
+    };
+  </script>
+  <body>
+    <div>
+      <b id="inputName"></b>'s diary
+      <div>
+        <div id="profile"></div>
+        <input type="text" />
+        <button onclick="register()">register</button>
+      </div>
+    </div>
+  </body>
+</html>
