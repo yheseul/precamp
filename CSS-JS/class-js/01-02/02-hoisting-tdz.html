@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>hoisting-tdz</title>
+    <script>
+      // console.log(food) // ReferenceError
+      const food = "chicken";
+      console.log(food);
+
+      function color1() {
+        console.log("red");
+      }
+      function color1() {
+        console.log("blue");
+      }
+      color1();
+
+      // 함수선언식
+      function price1() {
+        console.log(3000);
+      }
+
+      // 함수표현식
+      const price2 = function () {
+        console.log(5000);
+      };
+
+      // 화살표함수
+      const price3 = () => {
+        console.log(10000);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
