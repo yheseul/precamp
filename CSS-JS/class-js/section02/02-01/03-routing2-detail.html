@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>detail</title>
+    <script>
+      const queryString = location.search;
+      const part = new URLSearchParams(queryString);
+      const banana = part.get("banana");
+      const apple = part.get("apple");
+
+      alert(`banana: ${banana}, apple: ${apple}`)
+    </script>
+  </head>
+  <body>
+    <div>detail page</div>
+  </body>
+</html>
