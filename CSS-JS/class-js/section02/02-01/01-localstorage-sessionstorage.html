@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>localStorage-sessionStorage</title>
+    <script>
+      // 변수 저장
+      // let apple = 0
+      // const apple1 = () => {
+      //   apple +=1
+      // }
+      // const apple2 = () => {
+      //   apple +=2
+      // }
+      // const apple3 = () => {
+      //   apple+=3
+      // }
+      // const count = () => {
+      //   console.log(`apple: ${apple}`)
+      // }
+
+      // SessionStorage 저장
+      // const apple1 = () => {
+      //   sessionStorage.setItem('apple', 1)
+      // }
+      // const apple2 = () => {
+      //   sessionStorage.setItem('apple', 2)
+      // }
+      // const apple3 = () => {
+      //   sessionStorage.setItem('apple', 3)
+      // }
+      // const count = () => {
+      //   const apple = sessionStorage.getItem('apple')
+      //   alert(`apple: ${apple}`)
+      // }
+
+      // LocalStorage 저장
+      const apple1 = () => {
+        localStorage.setItem("apple", 1);
+      };
+      const apple2 = () => {
+        localStorage.setItem("apple", 2);
+      };
+      const apple3 = () => {
+        localStorage.setItem("apple", 3);
+      };
+      const count = () => {
+        const apple = localStorage.getItem("apple");
+        alert(`apple: ${apple}`);
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="apple1()">apple1</button><br />
+    <button onclick="apple2()">apple2</button><br />
+    <button onclick="apple3()">apple3</button><br />
+    <button onclick="count()">count</button>
+  </body>
+</html>
