@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>localStorage-json</title>
+    <script>
+      const add = () => {
+        const obj = {
+          apple: 3,
+          banana: 2,
+          orange: 10,
+        };
+        localStorage.setItem("fruits", JSON.stringify(obj));
+      };
+      const out = () => {
+        const fruits = localStorage.getItem("fruits");
+        console.log(JSON.parse(fruits));
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="add()">Add</button>
+    <button onclick="out()">Out</button>
+  </body>
+</html>
