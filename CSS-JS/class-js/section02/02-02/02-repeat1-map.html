@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>repeat1-map</title>
+    <script>
+      const fruits = ["apple", "banana", "orange"];
+      const candy1 = fruits.map((e) => e + " candy");
+      console.log(candy1);
+
+      const candy2 = fruits.map((e, i) => e + " candy" + ": " + i);
+      console.log(candy2);
+
+      const register = () => {
+        const fruits1 = {
+          name: 'banana',
+          price: 2000,
+        };
+        const fruits2 = {
+          name: 'apple',
+          price: 1000,
+        };
+        const fruits3 = {
+          name: 'lemon',
+          price: 3000,
+        };
+        const arr = [fruits1, fruits2, fruits3];
+        localStorage.setItem("fruits", JSON.stringify(arr));
+      };
+      const make = () => {
+        const fruitsString =
+          localStorage.getItem("fruits") != null
+            ? localStorage.getItem("fruits")
+            : "[]";
+        const fruits = JSON.parse(fruitsString);
+
+        const show = fruits.map((e, i) => `
+          <div>
+            <a href="./02-rpeat2-map-detail.html?number=${i}">
+              ${e.name}: ${e.price}won
+            </a>
+          </div>
+        `)
+        
+        return document.getElementById('show').innerHTML = show
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="register()">register</button>
+    <button onclick="make()">make</button>
+    <div id="show"></div>
+  </body>
+</html>
