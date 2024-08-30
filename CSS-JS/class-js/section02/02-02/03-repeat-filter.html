@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>filter</title>
+    <script>
+      const select = (fruits) => {
+        console.log(fruits.target.value);
+
+        let list = [{ name: "apple" }, { name: "banana" }, { name: "orange" }];
+
+        const result = list.filter((e) => fruits == e.name);
+        console.log(result);
+      };
+    </script>
+  </head>
+  <body>
+    <select onchange="select(event)">
+      <option>select</option>
+      <option value="apple">apple</option>
+      <option value="banana">banana</option>
+      <option value="orange">orange</option>
+    </select>
+  </body>
+</html>
