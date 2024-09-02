@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>01-scroll1-window</title>
+  <script>
+    const upScroll = () => {
+      // window.scrollTo({ top: 0 });
+      // window.scroll ({ top: -500 })
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      console.log(test);
+    }
+  </script>
+</head>
+<body>
+  <img src="./IMG_3280.JPG" width="3000px" />
+  <button onclick="upScroll()">Up!!!!!!</button>
+</body>
+</html>
