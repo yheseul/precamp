@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-scroll-listener2-element</title>
+    <style>
+      #box {
+        width: 1000px;
+        height: 500px;
+        overflow: scroll;
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        document.getElementById("box").addEventListener("scroll", () => {
+          const scroll = document.getElementById("box").scrollTop;
+          console.log(scroll);
+
+          if (scroll > 0) {
+            document.getElementById("image").style =
+              "border: 20px solid darkseagreen";
+          } else {
+            document.getElementById("image").style = "border: none";
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="box">
+      <img id="image" src="./IMG_3280.JPG" width="2000px" />
+    </div>
+  </body>
+</html>
