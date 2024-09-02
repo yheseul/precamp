@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>02-event-bubbling3-stop-propagation</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightcyan;
+    }
+  </style>
+  <script>
+    const goodButton = (event) => {
+      event.stopPropagation()
+      alert("좋아요+1")
+    }
+
+    const enlargement = () => {
+      document.getElementById("box").style = "width: 100vw; height: 100vh;"
+    }
+  </script>
+</head>
+<body>
+  <div id="box" onclick="enlargement()">
+    <button onclick="goodButton(event)">good</button>
+  </div>
+  <p>박스 클릭하면 확대</p>
+</body>
+</html>
