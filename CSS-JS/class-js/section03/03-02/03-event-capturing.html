@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-event-capturing</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: lightcyan;
+      }
+    </style>
+    <script>
+      const goodButton = (event) => {
+        event.stopPropagation();
+        alert("좋아요+1");
+      };
+
+      const enlargement = () => {
+        document.getElementById("box").style = "width: 100vw; height: 100vh;";
+      };
+
+      const checkPassword = (event) => {
+        event.stopPropagation()
+        const password = prompt("please input your password.");
+        if (password == 1234) {
+          alert("hello");
+          window.removeEventListener("click", checkPassword, { capture: true })
+        } else {
+          alert("try again");
+        }
+      };
+
+      window.addEventListener("click", checkPassword, { capture: true });
+    </script>
+  </head>
+  <body>
+    <div id="box" onclick="enlargement()">
+      <button onclick="goodButton(event)">good</button>
+    </div>
+    <p>박스 클릭하면 확대</p>
+  </body>
+</html>
