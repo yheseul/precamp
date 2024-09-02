@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>event-bubbling-prevent-default</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 500px;
+        background-color: darkturquoise;
+      }
+    </style>
+    <script>
+      const delete1 = (event, a) => {
+        event.preventDefault();
+        console.log(a);
+      };
+
+      const delete2 = (event, a) => {
+        event.preventDefault();
+        console.log(a);
+      };
+    </script>
+  </head>
+  <body>
+    <a href="./01-event-bubbling2-prevent-default-detail.html">
+      <div class="box">
+        <button onclick="delete1(event, 1)">delete1</button>
+      </div>
+    </a>
+
+    <a href="./01-event-bubbling2-prevent-default-detail.html">
+      <div class="box">
+        <button onclick="delete2(event, 2)">delete1</button>
+      </div>
+    </a>
+  </body>
+</html>
