@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>02-pinch-zoom</title>
+    <style></style>
+    <script>
+      const viewOriginalImage = () => {
+        document.body.style = "background-color: black";
+        document.getElementById("cat").style = "width: 100%";
+        document.getElementsByName("viewport")[0].content =
+          "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes";
+      };
+    </script>
+  </head>
+  <body>
+    <img
+      id="cat"
+      src="../IMG_3280.JPG"
+      width="200px"
+      onclick="viewOriginalImage()"
+    />
+  </body>
+</html>
