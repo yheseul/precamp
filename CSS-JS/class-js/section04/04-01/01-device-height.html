@@ -18,9 +18,11 @@
   </style>
   <script>
     window.addEventListener("scroll", () => {
+      const toFooter = document.getElementById("footer").getBoundingClientRect().top;
+      const height = window.innerHeight // window.outerHeight 메뉴, 주소창 포함
       const scroll = window.scrollY;
       const btn = document.getElementById("btn")
-      if(scroll >= 677){
+      if(height >= toFooter){
         btn.style = `
           position: relative;
           bottom: 40px;
@@ -39,6 +41,6 @@
 <body>
   <img src="../IMG_3280.JPG" width="100%" height="2000px" />
   <button id="btn" class="btn">^</button>
-  <div class="footer"></div>
+  <div id="footer" class="footer"></div>
 </body>
 </html>
