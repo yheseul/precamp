@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>03-flex-grid</title>
+  <style>
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1100px;
+      background-color: lightskyblue;
+      padding: 50px;
+    }
+    .cat {
+      width: 250px;
+      height: 250px;
+    }
+    @media (max-width: 650px) {
+      .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .cat {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+  </div>
+</body>
+</html>
