@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>02-media-query</title>
+  <style>
+    .box {
+      display: flex;
+    }
+    .cat {
+      background-color: cornflowerblue;
+      padding: 50px;
+    }
+    .cat_image {
+      width: 150px;
+      height: 150px;
+    }
+    .resister {
+      width: 300px;
+      background-color: darkseagreen;
+      flex-shrink: 0;
+    }
+    @media (max-width: 767px) {
+      .box {
+        flex-direction: column;
+      }
+      .cat {
+        background-color: aquamarine;
+        order: 2;
+      }
+      .resister {
+        width: 100%;
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="cat">
+      <img class="cat_image" src="./IMG_3280.JPG" />
+      <img class="cat_image" src="./IMG_3280.JPG" />
+      <img class="cat_image" src="./IMG_3280.JPG" />
+      <img class="cat_image" src="./IMG_3280.JPG" />
+    </div>
+    <div class="resister">
+      <h1>please write</h1>
+      text: <input text="text" />
+      <button class="btn">submit</button>
+    </div>
+  </div>
+</body>
+</html>
