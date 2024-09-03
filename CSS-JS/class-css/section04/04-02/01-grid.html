@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>01-grid</title>
+  <style>
+    .box {
+      display: grid;
+      /* grid-template-columns: 1fr 1fr 1fr; => 1 : 1 : 1 */
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 300px 300px 300px;
+      background-color: rgb(198, 224, 211);
+      width: 1600px;
+      height: 1600px;
+      place-content: center center; /* 전체 정렬 */
+      place-items: center center; /* 각각 정렬 */
+      column-gap: 50px;
+      row-gap: 50px;
+    }
+    .cat {
+      width: 250px;
+      height: 250px;
+      border: 5px solid palevioletred;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+    <img class="cat" src="./IMG_3280.JPG" />
+  </div>
+</body>
+</html>
