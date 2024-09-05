@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-navigator-geolocation</title>
+    <script>
+      const foodStore = [
+        { food: 'chicken', latitude: 37.1264698, longitude: 127.9482759 },
+        { food: 'pizza', latitude: 37.686784, longitude: 127.34746765 },
+        //. ...
+      ];
+
+      const currentLocation = () => {
+        navigator.geolocation.getCurrentPosition((current) => {
+          const currentLatitude = current.coords.latitude;
+          const currentLongitude = current.coords.longitude;
+          alert(`latitude: ${currentLatitude}, longitude: ${currentLongitude}`);
+
+          foodStore.forEach((el) => {
+            const nearLatitude =
+              Math.abs(currentLatitude - el.latitude) <= 0.5 ? true : false;
+            const nearLongitude =
+              Math.abs(currentLongitude - el.longitude) <= 0.5 ? true : false;
+
+              if(currentLatitude && currentLongitude) {
+                alert(`${el.food}`)
+              }
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="currentLocation()" id="location">current location</button>
+  </body>
+</html>
