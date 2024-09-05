@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-modal-background</title>
+    <style>
+      .modal_group {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .modal_back {
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgray;
+        opacity: 50%;
+        text-align: center;
+      }
+      .modal {
+        position: absolute;
+        top: calc(50% - 500px/2);
+        left: calc(50% - 500px/2);
+        width: 400px;
+        height: 500px;
+        background-color: mediumaquamarine;
+      }
+    </style>
+    <script>
+      const openModal = () => {
+        document.getElementById("modal_group").style = "display: block";
+      };
+
+      const openClose = () => {
+        document.getElementById("modal_group").style = "display: none";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openModal()">modal open</button>
+
+    <div id="modal_group" class="modal_group">
+      <div class="modal_back" onclick="openClose()"></div>
+      <div class="modal">modal background</div>
+    </div>
+  </body>
+</html>
