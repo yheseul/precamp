@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>02-stacking-context1</title>
+  <style>
+    .red {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+
+      z-index: 999;
+      position: absolute;
+    }
+    .yellow {
+      background-color: yellow;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      z-index: 1;
+    }
+    .blue {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="red"></div>
+  <div class="yellow"></div>
+  <div class="blue"></div>
+</body>
+</html>
