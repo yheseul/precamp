@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>02-stacking-context2</title>
+  <style>
+    .layout {
+      margin: 100px;
+      padding: 100px;
+      width: 1000px;
+      height: 1000px;
+      background-color: yellowgreen;
+      position: absolute;
+    }
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: bisque;
+    }
+    .red {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+
+      z-index: 999;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    .yellow {
+      background-color: yellow;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      z-index: 1;
+    }
+    .blue {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="box">
+      <div class="red"></div>
+      <div class="yellow"></div>
+      <div class="blue"></div>
+    </div>
+  </div>
+</body>
+</html>
