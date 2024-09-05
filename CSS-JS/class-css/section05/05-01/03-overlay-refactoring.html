@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-overlay-refactoring</title>
+    <style>
+      .box {
+        margin: 100px;
+        position: relative;
+      }
+      .picture {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+      .btn {
+        position: absolute;
+        top: 0;
+        left: 190px;
+        /* position: relative;
+      top: -200px;
+      left: 190px; */
+      }
+      .context {
+        width: 200px;
+        height: 100px;
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="picture"></div>
+      <button class="btn">X</button>
+      <div class="context">nice to meet you</div>
+    </div>
+  </body>
+</html>
