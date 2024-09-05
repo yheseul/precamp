@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-keyboard-input</title>
+    <style></style>
+    <script>
+      const submit = () => {
+        alert("completed");
+      };
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          if (
+            document.activeElement.id == "title" ||
+            document.activeElement.id == "content"
+          ) {
+            alert("completed");
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    title: <input id="title" type="text" /><br />
+    content: <input id="content" type="text" /><br />
+    <button onclick="submit()">submit</button>
+  </body>
+</html>
