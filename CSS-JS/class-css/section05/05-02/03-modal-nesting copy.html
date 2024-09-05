@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-modal-nesting copy</title>
+    <style>
+      .modal_group {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .modal_back {
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgray;
+        opacity: 50%;
+        text-align: center;
+      }
+      .modal1 {
+        position: absolute;
+        top: calc(50% - 500px / 2);
+        left: calc(50% - 500px / 2);
+        width: 400px;
+        height: 500px;
+        background-color: mediumaquamarine;
+      }
+      .modal2 {
+        position: absolute;
+        top: calc(50% - 150px / 2);
+        left: calc(50% - 600px / 2);
+        width: 600px;
+        height: 150px;
+        background-color: lightskyblue;
+      }
+    </style>
+    <script>
+      const openModal = (id) => {
+        console.log('test')
+        document.getElementById(id).style = "display: block";
+      };
+
+      const closeModal = (id) => {
+        document.getElementById(id).style = "display: none";
+      }
+
+    </script>
+  </head>
+  <body>
+    <button onclick="openModal('modal_group')">modal open</button>
+
+    <div id="modal_group" class="modal_group">
+      <div class="modal_back" onclick="closeModal('modal_group')"></div>
+      <div class="modal1">
+        <div class="title">title: <input type="text"></div>
+        <div class="content">content: <textarea></textarea></div>
+        <button onclick="openModal('resister_group')">submit</button>
+      </div>
+    </div>
+
+    <div id="resister_group" class="modal_group">
+      <div class="modal_back" onclick="closeModal('resister_group')"></div>
+      <div class="modal2">
+        <p>completed!</p>  
+      </div>
+    </div>
+  </body>
+</html>
