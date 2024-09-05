@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-form</title>
+    <script>
+      const submitForm = () => {
+        alert("completed!");
+      };
+    </script>
+  </head>
+  <body>
+    <form action="#" onsubmit="submitForm()">
+      title: <input type="text" /><br />
+      content: <input type="text" /><br />
+      <button>submit</button>
+    </form>
+
+    <!-- submit O / default -->
+    <button type="submit"></button>
+    <!-- submit X -->
+    <button type="button"></button>
+    <!-- Form reset -->
+    <button type="reset"></button>
+  </body>
+</html>
+7
