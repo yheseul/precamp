@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>01-keyboard.html</title>
+    <style>
+      .chunsik {
+        position: absolute;
+        top: 300px;
+        left: 300px;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <script>
+      let booster = 1.0;
+      window.addEventListener("keydown", (event) => {
+        const chunsik = document.getElementById("chunsik");
+        const chunsikStyle = getComputedStyle(chunsik);
+        const y = Number(chunsikStyle.top.replace("px", ""));
+        const x = Number(chunsikStyle.left.replace("px", ""));
+
+        switch (event.key) {
+          case "ArrowUp": {
+            document.getElementById("chunsik").style = `top: ${
+              (y - 20) / booster
+            }px; left: ${x}px`;
+            break;
+          }
+          case "ArrowDown": {
+            document.getElementById("chunsik").style = `top: ${
+              (y + 20) * booster
+            }px; left: ${x}px`;
+            break;
+          }
+          case "ArrowLeft": {
+            document.getElementById("chunsik").style = `top: ${y}px; left: ${
+              (x - 20) / booster
+            }px`;
+            break;
+          }
+          case "ArrowRight": {
+            document.getElementById("chunsik").style = `top: ${y}px; left: ${
+              (x + 20) * booster
+            }px`;
+            break;
+          }
+          case " ": {
+            booster += 0.1;
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <img src="./chun.png" class="chunsik" id="chunsik" />
+  </body>
+</html>
