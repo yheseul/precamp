@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-navigator-clipboard</title>
+    <script>
+      const copy1 = () => {
+        const text = document.getElementById("text").innerText;
+        navigator.clipboard.writeText(text);
+        alert("completed!");
+      };
+      const copy2 = () => {
+        const text = document.getElementById("text").innerText;
+        navigator.clipboard.writeText(`${text}. i am yeseul.`);
+        alert("completed!");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="text">hi nice to meet you</div>
+    <button onclick="copy1()">copy1</button>
+    <button onclick="copy2()">copy2</button>
+  </body>
+</html>
