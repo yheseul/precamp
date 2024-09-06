@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>03-object-fit-aspect-ratio</title>
+  <style>
+    .box {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    .cat {
+      margin: 10px;
+      width: 300px;
+      object-fit: cover;
+      aspect-ratio:  16 / 9;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="./IMG_3280.JPG" class="cat" />
+    <img src="../image/00-image2.jpg" class="cat" />
+    <img src="../image/00-image3.jpg" class="cat" />
+    <img src="../image/00-image4.jpg" class="cat" />
+    <img src="../image/00-image5.jpg" class="cat"/>
+    <img src="../image/00-image6.jpg" class="cat" />
+  </div>
+</body>
+</html>
