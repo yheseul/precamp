@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>01-sentence-api</title>
+    <script>
+      const sentence = () => {
+        fetch("https://koreanjson.com/posts/1").then((result) => {
+          result.json().then((object) => {
+            console.log(object);
+            console.log(object.title);
+            console.log(object.content);
+            console.log(object.updatedAt);
+
+            const title = object.title;
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="sentence()">click</button>
+  </body>
+</html>
