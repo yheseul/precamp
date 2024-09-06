@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>03-component</title>
+  <style>
+    .banner {
+      height: 100px;
+      background-color: aqua;
+    }
+    .nav {
+      height: 50px;
+      background-color: cadetblue;
+    }
+    #diaryList {
+      display: block;
+    }
+    #dogsList {
+      display: none;
+    }
+  </style>
+  <script>
+    const menu = (el) => {
+      switch (el) {
+        case 'diary': {
+          document.getElementById("diaryList").style = "display: block"
+          document.getElementById("dogsList").style = "display: none"
+          break;
+        }
+        case 'cat': {
+          document.getElementById("diaryList").style = "display: none"
+          document.getElementById("dogsList").style = "display: block"
+          break;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="banner">banner</div>
+  <div class="nav">
+    <button onclick="menu('diary')">diary</button>
+    <button onclick="menu('cat')">cat</button>
+  </div>
+
+  <div id="diaryList">
+    diary list
+    <div>diary1</div>
+    <div>diary2</div>
+    <div>...</div>
+  </div>
+
+  <div id="dogsList">
+    dogs list
+    <div>dog1</div>
+    <div>dog12</div>
+    <div>...</div>
+  </div>
+</body>
+</html>
