@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>02-iframe1-index</title>
+  <style>
+    .banner {
+      height: 100px;
+      background-color: aqua;
+    }
+    .nav {
+      height: 50px;
+      background-color: cadetblue;
+    }
+    iframe {
+      border: none;
+    }
+  </style>
+  <script>
+    const menu = (el) => {
+      switch (el) {
+        case 'diary': {
+          document.getElementById("iframe").src = "./02-iframe2-diary.html"
+          break;
+        }
+        case 'cat': {
+          document.getElementById("iframe").src = "./02-iframe3-dogs.html"
+          break;
+        }
+        case 'codeCamp': {
+          document.getElementById("iframe").src = "https://codebootcamp.co.kr/"
+          break;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="banner">banner</div>
+  <div class="nav">
+    <button onclick="menu('diary')">diary</button>
+    <button onclick="menu('cat')">cat</button>
+    <button onclick="menu('codeCamp')">codecamp</button>
+  </div>
+  <iframe id="iframe" src="./02-iframe2-diary.html"></iframe>
+</body>
+</html>
