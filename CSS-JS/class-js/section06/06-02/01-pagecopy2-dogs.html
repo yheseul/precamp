@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>01-pageCopy2-dogs</title>
+  <style>
+    .banner {
+      height: 100px;
+      background-color: aqua;
+    }
+    .nav {
+      height: 50px;
+      background-color: cadetblue;
+    }
+  </style>
+  <script>
+    const menu = (el) => {
+      switch (el) {
+        case 'diary': {
+          location.href = "./01-pageCopy1-diary.html"
+          break;
+        }
+        case 'cat': {
+          location.href = "./01-pageCopy2-dogs.html"
+          break;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="banner">banner</div>
+  <div class="nav">
+    <button onclick="menu('diary')">diary</button>
+    <button onclick="menu('cat')">cat</button>
+  </div>
+    cat list
+    <div>cat1</div>
+    <div>cat2</div>
+    <div>...</div>
+</body>
+</html>
