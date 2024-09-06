@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-dogs-api-map</title>
+    <script>
+      const sentence = () => {
+        fetch("https://dog.ceo/api/breeds/image/random/3").then((result) => {
+          result.json().then((object) => {
+            const dogs = object.message;
+
+            document.getElementById("showImg").innerHTML = dogs.map((dog) => `
+                <img src="${dog}" width="300px" />
+              `).join("");
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="sentence()">click</button>
+    <div id="showImg"></div>
+  </body>
+</html>
