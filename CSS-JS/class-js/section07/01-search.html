@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>01-search</title>
+  <script>
+    const colorList = ['red', 'blue', 'green', 'yellow', 'pink']
+    const onSearch = (event) => {
+      const color = event.target.value
+      const result = colorList.filter(e => e.includes(color))
+      document.getElementById("result").innerText = result
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="search" oninput="onSearch(event)" placeholder="Search">
+  <div id="result"></div>
+</body>
+</html>
