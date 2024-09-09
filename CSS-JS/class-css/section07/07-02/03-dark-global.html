@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-dark-global</title>
+    <style>
+      :root {
+        --basicColor: black;
+        --basicBackgroundColor: white;
+        --basicCheckBoxColor: red;
+        --basicInputColor: lightgray;
+        --basicInputPlaceholderColor: gray;
+        --basicButtonColor: black;
+        --basicButtonBackgroundColor: white;
+      }
+      [house="dark"]{
+        --basicColor: white;
+        --basicBackgroundColor: black;
+        --basicCheckBoxColor: white;
+        --basicInputColor: gray;
+        --basicInputPlaceholderColor: orange;
+        --basicButtonColor: blue;
+        --basicButtonBackgroundColor: aqua;
+      }
+      /* [type="text"] {
+        border: 1px solid red;
+      } */
+      /* input[type="text"] {
+        border: 1px solid blue;
+      } */
+      body {
+        color: var(--basicColor);
+        background-color: var(--basicBackgroundColor);
+        accent-color: var(--basicCheckBoxColor);
+      }
+      input {
+        background-color: var(--basicInputColor);
+      }
+      input::placeholder {
+        color: var(--basicInputPlaceholderColor);
+      }
+      button {
+        color: var(--basicButtonColor);
+        background-color: var(--basicButtonBackgroundColor);
+      }
+    </style>
+    <script>
+      const lamp = (event) => {
+        const house = document.documentElement;
+        event.target.checked
+          ? (house.setAttribute("house", "dark"))
+          : (house.setAttribute("house", "light"));
+      };
+    </script>
+  </head>
+  <body class="light">
+    <input type="checkbox" onclick="lamp(event)" />dark <br /><br />
+    email: <input type="email" placeholder="please enter your email" /><br />
+    password:
+    <input type="password" placeholder="please enter your password" /><br />
+    <button>registration</button>
+  </body>
+</html>
