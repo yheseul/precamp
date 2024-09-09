@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>01-dark.html</title>
+    <style>
+      .light {
+        color: black;
+        background-color: white;
+
+      }
+      .dark { 
+        color: white;
+        background-color: black;
+      }
+    </style>
+    <script>
+      const lamp = (event) => {
+        const room = document.body
+        event.target.checked ? room.className = "dark" : room.className = "light";
+      }
+    </script>
+  </head>
+  <body class="light">
+    <input type="checkbox" onclick="lamp(event)" />dark
+    <br /><br />
+    email: <input type="email" /><br />
+    password: <input type="password" /><br />
+    <button>registration</button>
+  </body>
+</html>
