@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-dropdown</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #checkbox {
+        appearance: none;
+        width: 150px;
+        height: 40px;
+        border: 2px solid greenyellow;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 5px;
+        --boxText: "선택하세요"
+      }
+      #checkbox::after {
+        content: var(--boxText);
+      }
+      #checkbox:checked {
+        background-color: aquamarine;
+      }
+      #checkbox:checked + .dropdown {
+        display: block;
+      }
+      .dropdown {
+        display: none;
+        width: 150px;
+        border: 2px solid green;
+        border-radius: 10px;
+        overflow: hidden; /* 모서리 영역 넘침 X */
+      }
+      .dropdown input {
+        display: none;
+      }
+      .dropdown label {
+        display: block;
+        height: 40px;
+        padding: 10px;
+      }
+      .dropdown label:hover {
+        background-color: aquamarine;
+      }
+    </style>
+    <script>
+      const dropDownContent = (event) => {
+        const checkbox = document.getElementById('checkbox')
+        checkbox.style.cssText = `--boxText: "${event.target.id}"`
+        checkbox.click()
+      }
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" id="checkbox" />
+    <ul class="dropdown">
+      <li>
+        <input
+          type="radio"
+          name="item"
+          id="apple"
+          onclick="dropDownContent(event)"
+        />
+        <label for="apple">apple</label>
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="item"
+          id="banana"
+          onclick="dropDownContent(event)"
+        />
+        <label for="banana">banana</label>
+      </li>
+      <li>
+        <input
+          type="radio"
+          name="item"
+          id="strawberry"
+          onclick="dropDownContent(event)"
+        />
+        <label for="strawberry">strawberry</label>
+      </li>
+    </ul>
+  </body>
+</html>
