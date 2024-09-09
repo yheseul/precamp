@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-debounce-search-api</title>
+    <script>
+      let timer;
+      const onSearch = (event) => {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          const cat = event.target.value;
+
+          document.getElementById("result").innerHTML = `
+          <img src="https://cataas.com/cat/${cat}/says/hi" width="300px" />
+        `;
+        }, 2000);
+      };
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="search"
+      oninput="onSearch(event)"
+      placeholder="Search"
+    />
+    <div id="result"></div>
+  </body>
+</html>
