@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-toggle</title>
+    <style>
+      .toggle {
+        appearance: none;
+        width: 40px;
+        height: 24px;
+        border-radius: 20px;
+        background-color: lightblue;
+      }
+      .toggle::after {
+        display: block;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 3px;
+        transition: margin-left 0.3s;
+      }
+      .toggle:checked {
+        background-color: rgb(93, 192, 224);
+      }
+      .toggle:checked::after {
+        margin-left: 18px;
+      }
+    </style>
+    <script>
+      const toggle = (event) => {
+        event.isTrusted === true ? console.log('true') : console.log('false');
+      }
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" class="toggle" onclick="toggle(event)" />
+  </body>
+</html>
