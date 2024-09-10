@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>01-calendar-click-area</title>
+  </head>
+  <style>
+    .my_date {
+      position: relative;
+    }
+    .my_date::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+    }
+  </style>
+  <body>
+    <input type="date" class="my_date" />
+  </body>
+</html>
