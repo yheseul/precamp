@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-throttle-scroll-api</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        margin: 50px;
+      }
+    </style>
+    <script>
+      const showBox = () => {
+        fetch("https://dog.ceo/api/breeds/image/random").then((result) => {
+          result.json().then((object) => {
+            const dog = object.message;
+
+            const box = document.getElementById("boxGroup").innerHTML;
+            document.getElementById("boxGroup").innerHTML =
+              box + `<img src="${dog}" width="500px"/>;`
+          });
+        });
+      };
+
+      let timer = null;
+      window.addEventListener("scroll", () => {
+        const scrollPercent =
+          document.documentElement.scrollTop /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+        if (scrollPercent < 0.9) return;
+
+        if (timer !== null) return;
+
+        showBox();
+
+        timer = setTimeout(() => {
+          timer = null;
+
+          const scrollPercent =
+            document.documentElement.scrollTop /
+            (document.documentElement.scrollHeight -
+              document.documentElement.clientHeight);
+
+          if (scrollPercent === 1) {
+            showBox();
+          }
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="boxGroup">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
