@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-pagination-prev-next-page</title>
+    <script>
+      let start = 1;
+
+      const prevPage = () => {
+        start = start - 10;
+        showPage();
+      };
+
+      const nextPage = () => {
+        start = start + 10;
+        showPage();
+      };
+
+      const showPage = () => {
+        const box = new Array(10).fill("red");
+        console.log(box);
+
+        const page = box
+          .map((_, i) => {
+            return `<button>${i + start}</button>`;
+          })
+          .join(" ");
+
+        document.getElementById("show_page").innerHTML = page;
+      };
+
+      window.onload = () => {
+        showPage();
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="prevPage()">prev</button>
+    <span id="show_page"></span>
+    <button onclick="nextPage()">next</button>
+  </body>
+</html>
