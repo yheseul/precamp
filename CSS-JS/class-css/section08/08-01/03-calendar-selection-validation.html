@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>03-calendar-selection-validation</title>
+  </head>
+  <style>
+    .my_date {
+      position: relative;
+    }
+    .my_date::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 1;
+    }
+    .my_date::-webkit-datetime-edit-text,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field, 
+    ::-webkit-datetime-edit-day-field {
+      display: none;
+    }
+    .my_date:valid::-webkit-datetime-edit-text,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field, 
+    ::-webkit-datetime-edit-day-field {
+      display: inline;
+      color: blue;
+    }
+    .my_date::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(birthday); /* 실무: data-* 형태 */
+    }
+    .my_date:valid:after {
+      display: none;
+    }
+    .my_date:invalid:after {
+      color: red;
+    }
+  </style>
+  <body>
+    <input
+      type="date"
+      class="my_date"
+      birthday="please select your birthday."
+      required
+    />
+  </body>
+</html>
