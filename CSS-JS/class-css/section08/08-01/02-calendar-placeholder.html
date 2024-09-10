@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>02-calendar-placeholder</title>
+  </head>
+  <style>
+    .my_date {
+      position: relative;
+    }
+    .my_date::-webkit-calendar-picker-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 1;
+    }
+    .my_date::-webkit-datetime-edit-text,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field, 
+    ::-webkit-datetime-edit-day-field {
+      display: none;
+    }
+    .my_date::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: attr(birthday); /* 실무: data-* 형태 */
+    }
+  </style>
+  <body>
+    <input
+      type="date"
+      class="my_date"
+      birthday="please select your birthday."
+    />
+  </body>
+</html>
