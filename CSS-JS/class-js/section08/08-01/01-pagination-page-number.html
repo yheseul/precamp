@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>01-pagination-page-number</title>
+    <script>
+      window.onload = () => {
+        const box = new Array(10).fill("red");
+        console.log(box);
+
+        const page = box
+          .map((_, i) => {
+            return `<button>${i + 1}</button>`;
+          })
+          .join(" ");
+
+        document.getElementById("showPage").innerHTML = page;
+      };
+    </script>
+  </head>
+  <body>
+    <div id="showPage"></div>
+  </body>
+</html>
