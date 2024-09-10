@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>01-linear-gradient</title>
+  <style>
+    .box1 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(0deg pink, purple);
+      background: linear-gradient(45deg pink, purple);
+      background: linear-gradient(20deg, pink 30%, purple 30% 100%);
+      background: linear-gradient(20deg, pink, purple 30%);
+
+    }
+    .box2 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(130deg, yellow, transparent),
+                  linear-gradient(220deg, red, transparent)
+    }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>
